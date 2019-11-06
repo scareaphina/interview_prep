@@ -60,3 +60,25 @@ for (var i = 1; i <numbers.length; i++) {
 
   console.log(largest);
   console.log(smallest);
+
+
+// find all pairs of an integer array whose sum is equal to a given number
+
+function twoSums(nums, targetNum) {
+  var map = [];
+  var indexNum = [];
+
+  for (var x = 0; x < nums.length; x++) {
+    if (map[nums[x]] != null) {
+      index = map[nums[x]];
+      indexNum[0] = index + 1;
+      indexNum[1] = x + 1;
+      break;
+    } else {
+      map[targetNum - nums[x]] = x;
+    }
+  }
+  return indexNum;
+}
+
+console.log(twoSums([10, 20, 10, 40, 50, 60, 70], 50));
