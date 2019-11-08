@@ -18,6 +18,7 @@ console.log(mia);
 
 
 // finding duplicates in an integer array
+// the big O is N where N is the length of the thing, because it only goes through the loop once
 
 function findDuplicates(data) {
 
