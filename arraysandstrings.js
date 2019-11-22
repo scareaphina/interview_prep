@@ -22,3 +22,18 @@ function findDoubles(sent) {
 
 console.log(findDoubles("apple"));
 console.log(findDoubles("pickle"));
+
+////////
+// 1.2
+// a method to decide if one string is a permutation of another
+
+function isPermutation(a, b) {
+  if (a.length !== b.length) {
+    return false;
+  }
+  return a.split("").sort().join() === b.split("").sort().join();
+}
+
+console.log(isPermutation("apple", "pickle"));
+console.log(isPermutation("the", "these"));
+console.log(isPermutation("ten", "net"));
