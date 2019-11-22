@@ -1,3 +1,4 @@
+////////
 // 1.1
 // an algorithm to determine if a string has all unique characters
 
@@ -35,7 +36,7 @@ function isPermutation(a, b) {
 }
 
 console.log(isPermutation("apple", "pickle"));
-console.log(isPermutation("the", "these"));
+console.log(isPermutation("these", "the"));
 console.log(isPermutation("ten", "net"));
 
 ////////
@@ -51,6 +52,7 @@ function replaceSpaces(sent) {
 }
 
 console.log(replaceSpaces("I am doing the thing!"));
+console.log(replaceSpaces("My cat is a weirdo."));
 
 ////////
 // 1.4
@@ -72,13 +74,12 @@ console.log(isPalindrome("elephant"));
 // given two strings, write a function to check if they are one edit or zero edits away from one another
 
 function oneAway(first, second) {
-  let a = first.length;
-  let b = second.length;
 
-  if ((a - b) > 1)
-  return false;
-  
-    let edited = false;
+  if (Math.abs(first.length - second.length) > 1) {
+    return false;
+  }
+
+  let edited = false;
 
   for (let i = 0, j = 0; i < first.length && j < second.length; ++i, ++j) {
     if (first[i] !== second[j]) {
@@ -95,10 +96,16 @@ function oneAway(first, second) {
     }
   }
 
-return true;
+  return true;
 }
 
 console.log(oneAway("pale", "ple"));
 console.log(oneAway("pales", "pale"));
 console.log(oneAway("pale", "bale"));
 console.log(oneAway("pale", "bake"));
+console.log(oneAway("paling", "pale"));
+
+////////
+// 1.6
+//
+
