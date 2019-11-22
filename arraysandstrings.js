@@ -77,8 +77,25 @@ function oneAway(first, second) {
 
   if ((a - b) > 1)
   return false;
-
   
+    let edited = false;
+
+  for (let i = 0, j = 0; i < first.length && j < second.length; ++i, ++j) {
+    if (first[i] !== second[j]) {
+      if (edited) {
+        return false;
+      }
+
+      if (first.length > second.length) {
+        --j;
+      } else if (first.length < second.length) {
+        --i;
+      }
+      edited = true;
+    }
+  }
+
+return true;
 }
 
 console.log(oneAway("pale", "ple"));
