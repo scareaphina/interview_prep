@@ -72,11 +72,16 @@ console.log(isPalindrome("elephant"));
 // given two strings, write a function to check if they are one edit or zero edits away from one another
 
 function oneAway(first, second) {
-  let a = first.length();
-  let b = second.length();
+  let a = first.length;
+  let b = second.length;
 
   if ((a - b) > 1)
   return false;
 
   
 }
+
+console.log(oneAway("pale", "ple"));
+console.log(oneAway("pales", "pale"));
+console.log(oneAway("pale", "bale"));
+console.log(oneAway("pale", "bake"));
