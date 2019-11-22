@@ -51,3 +51,18 @@ function replaceSpaces(sent) {
 }
 
 console.log(replaceSpaces("I am doing the thing!"));
+
+////////
+// 1.4
+// write a function to check if a string is a permutation of a palindrome
+
+function isPalindrome(string) {
+  var removeChar = string.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+
+  var palindrome = removeChar.split("").reverse().join("");
+
+  return (removeChar === palindrome);
+}
+
+console.log(isPalindrome("never odd or even"));
+console.log(isPalindrome("elephant"));
