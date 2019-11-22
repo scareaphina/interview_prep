@@ -37,3 +37,17 @@ function isPermutation(a, b) {
 console.log(isPermutation("apple", "pickle"));
 console.log(isPermutation("the", "these"));
 console.log(isPermutation("ten", "net"));
+
+////////
+// 1.3
+// a method to replace all spaces in a string with '%20'
+
+function replaceSpaces(sent) {
+  var arr = sent.split(" ");
+
+  var newString = arr.join("%20");
+
+  return newString;
+}
+
+console.log(replaceSpaces("I am doing the thing!"));
