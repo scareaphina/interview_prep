@@ -107,5 +107,6 @@ console.log(oneAway("paling", "pale"));
 
 ////////
 // 1.6
-//
+// a method to perform string compression using the counts of repeated characters
+// example: aabcccccaaa would become a2b1c5a3
 
