@@ -110,3 +110,23 @@ console.log(oneAway("paling", "pale"));
 // a method to perform string compression using the counts of repeated characters
 // example: aabcccccaaa would become a2b1c5a3
 
+function compressString(str) {
+  var a = "";
+
+  for (i = 0; i < str.length; ++i) {
+    var char = str[i],
+    start = i;
+
+    while (i + 1 < str.length && char === str[i + 1]) {
+      ++i;
+    }
+
+    a += (i - start + 1) + char;
+  }
+
+  return a.length < str.length ? a : str;
+
+}
+
+console.log(compressString("aabcccccaaa"));
+console.log(compressString("banana"));
