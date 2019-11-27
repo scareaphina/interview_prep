@@ -205,3 +205,23 @@ export function zeroMatrix(matrix) {
 
   return matrix;
 }
+
+////////
+// 1.9
+// assume you have a method isSubstring which checks if one word is a substring of another. given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring
+// ex: "waterbottle" is a rotation of "erbottlewat"
+
+export function isRotatedSubstring(str1, str2) {
+  if (!str1 || str2) {
+    throw new Error("invalid input");
+  }
+  if (str.length !== str2.length) {
+    return false;
+  }
+  return isSubstring(str1 + str1, str2);
+}
+
+function isSubstring(str, substr) {
+  return str.includes(substr);
+}
+
