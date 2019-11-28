@@ -23,3 +23,7 @@ export function removeDuplicatesSent(list) {
 
   return list;
 }
+
+////////
+// 2.2
+// walk one pointer ahead k nodes first then create a second pointer to the start of the list. walk both pointers until the first one hits the end of the list, at that point the second pointer will be pointing to the kth to the last node 
